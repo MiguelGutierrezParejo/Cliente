@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Pulsa para generar el array:
+    <button type="submit" onclick="crear_array()">Generar</button><br><br>
+    Pulsa para comprobar que son todos positivos:
+    <button type="submit" onclick="comprobar_positivos()">Generar</button><br><br>
+    Devuelve en un nuevo array el triple sus valores
+    <button type="submit" onclick="triplicar_array()">Generar</button><br><br>
+    Calcula el resultado de multiplicar todos los valores del nuevo array.
+    <button type="submit" onclick="multiplicar_array()">Generar</button><br><br>
+    <div id="crear"></div>
+    <div id="comprobar"></div>
+    <div id="triplicar"></div>
+    <div id="multiplicar"></div>
+
+    <script>
+        var a = []
+        var lienzo1 = document.getElementById("crear")
+        var lienzo2 = document.getElementById("comprobar")
+        var lienzo3 = document.getElementById("triplicar")
+        var lienzo4 = document.getElementById("multiplicar")
+
+        function crear_array() {
+            while (a.length < 5) {
+            var aleatorios = Math.floor(Math.random()*11);
+            a.push(aleatorios);
+            }
+            lienzo1.innerHTML = `El array creado es: [${a}]`
+        }
+
+        function comprobar_positivos() {
+            if (a.every(n=>n>=0)) {
+                lienzo2.innerHTML = "Todos los valores son positivos"
+            } else {
+                lienzo2.innerHTML = "Algún valor es negativo"
+            }
+        }
+
+        function triplicar_array() {
+            t = a.map(n=>n*3)
+            lienzo3.innerHTML = `El nuevo array con los triples es: [${t}]`
+        }
+
+        function multiplicar_array() {
+            var res = t.reduce((x,y)=>x*y);
+            lienzo4.innerHTML = `La multiplicación del array triple es: ${res}`
+        }
+    </script>
+</body>
+</html>

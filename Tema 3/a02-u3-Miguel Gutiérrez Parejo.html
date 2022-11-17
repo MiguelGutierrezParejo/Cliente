@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Manuel</title>
+</head>
+<body>
+    <script>
+        var actual = new Date();
+        var cum = new Date(prompt("Introduce tu edad con el siguiente formato: 'yyyy, mm, dd': "));
+        var edad = actual - cum;
+        var anyos = edad / 1000 / 3600 / 24 / 365;
+
+        alert("Tu edad es de: " + parseInt(anyos) + " años")
+    </script>
+</body>
+</html>

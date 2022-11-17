@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Paco</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Introduce un numero inicial: ");
+        var b = prompt("Introduce un numero final: ");
+
+        if (a > b) {
+            var M = a;
+            var m = b;
+        } else{
+            var M = b;
+            var m = a
+        }
+
+        var multiplos = [];
+
+        for (let i = m; i <= M; i++) {
+            if (i % 8 == 0) {
+                multiplos.push(i);
+            };
+        }
+        document.write("Los multiplos de 8 son: ",multiplos);
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Introduce un número: ")
+        var m = prompt("¿Qué deseas hacer?\n1. Suma entera\n2. Suma decimal")
+
+        function sumaentero(numero) {
+            var n = parseFloat(numero)
+            var t = Math.trunc(n)
+            var c = String(t)
+            var a = c.split('')
+            var sum = 0;
+
+            for (let i = 0; i < a.length; i++) {
+                sum += parseInt(a[i]);
+            }
+            alert(sum)
+        }
+
+        function sumadigitos(numero) {
+                var transforma_array=numero.split('')
+                var suma_digitos=transforma_array.reduce(function(valorAnterior, valorActual){
+                    return 1 * valorAnterior + (isNaN(1 * valorActual) ? 0 : 1 * valorActual);
+                }, 0);
+
+            alert(suma_digitos);
+        }
+
+        switch (m) {
+            case "1":
+                sumaentero(n);
+                break;
+
+            case "2":
+                sumadigitos(n);
+                break
+            default:
+                break;
+        }
+    </script>
+</body>
+</html>

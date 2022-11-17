@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <label for="num">Introduce el precio sin IVA:</label>
+    <input type="text" name="dinero" id="dinero">
+    <br><br>
+    <label for="iva">Selecciona el tipo de IVA</label><br>
+    <input type="radio" name="iva" id="21" value="21">21%
+    <input type="radio" name="iva" id="10" value="10">10%
+    <input type="radio" name="iva" id="5" value="5">5%
+    <br><br>
+    <button type="submit" onclick="calcular_precio()">Calcular precio</button>
+    <br><br><br>
+    <div id="calculo"></div>
+    <script>
+       function calcular_precio(){
+            var dinero = document.getElementById("dinero");
+            var iva = document.querySelector('input[name="iva"]:checked')
+                        ? document.querySelector('input[name="iva"]:checked').value
+                        :21;
+            var resultado = document.getElementById("calculo");
+
+            if(dinero.value != ''){
+                var res = ((dinero.value*iva)/100)+parseInt(dinero.value);
+                resultado.innerText="El valor total es: " + res + "€";
+            }
+        }
+    </script>
+</body>
+</html>

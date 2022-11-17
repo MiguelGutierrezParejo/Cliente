@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Notas</title>
+</head>
+<body>
+    <script>
+        var nota = prompt("introduce tu nota: ");
+        var res = (nota < 5) ? alert("Suspenso :("):
+                    (nota >= 5 && nota < 7) ? alert("Aprobado"):
+                        (nota >= 7 && nota < 9) ? alert("Notable"):
+                            (nota >= 9) ? alert("Sobresaliente :)") : alert("Error: no has introducido una nota válida");
+    </script>
+</body>
+</html>

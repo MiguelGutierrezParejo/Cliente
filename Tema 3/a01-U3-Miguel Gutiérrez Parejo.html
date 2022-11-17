@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paco</title>
+</head>
+<body>
+    <script>
+        var actual = new Date();
+        var final = new Date(2022, 11, 31);
+        var total = final - actual;
+        var dias = total / 1000 / 3600 / 24
+
+        document.write("Los días que quedan hasta fin de año son: " + Math.trunc(dias));
+        document.write("<BR>");
+        document.write("<BR>");
+        document.write(" Los milisegundos que quedan son: "+ total);
+        
+    </script>
+</body>
+</html>

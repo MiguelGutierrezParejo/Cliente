@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <script>
+        var actual = new Date();
+        var cum = new Date(prompt("Introduce tu edad con el siguiente formato: 'YYYY, MM, DD': "))
+        var mes = actual.getMonth() - cum.getMonth();
+        
+        if (mes < 0) {
+            var anyos = (actual.getFullYear() - cum.getFullYear()) - 1;
+            var mes = 
+        } else {
+            var anyos = actual.getFullYear() - cum.getFullYear();
+        }
+        var dias = actual.getDate() - cum.getDate();
+
+        alert("Tu edad es de: " + Math.abs(anyos) + " años, " + Math.abs(mes) + " meses, " + Math.abs(dias) + " dias");
+
+    </script>
+</body>
+</html>

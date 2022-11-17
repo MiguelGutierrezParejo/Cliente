@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("Navigator <b>appCodeName</b>: " + navigator.appCodeName + "</br>")
+        document.write("Navigator <b>appName</b>: " + navigator.appName + "</br>")
+        document.write("Navigator <b>language</b>: " + navigator.language + "</br>")
+        document.write("Navigator <b>platform</b>: " + navigator.platform + "</br>")
+        document.write("Navigator <b>product</b>: " + navigator.product + "</br>")
+        document.write("Navigator <b>userAgent</b>: " + navigator.userAgent + "</br>")
+        document.write("Navigator <b>cookies</b>: " + navigator.cookieEnabled + "</br>")
+        document.write("Navigator <b>online</b>: " + navigator.onLine + "</br>")
+
+        if (navigator.javaEnabled()) {
+            document.write("El navegador si esta preparado para soportar los applets de java")
+            
+        } else {
+            document.write("El navegador no esta preparado para soportar los applets de java")
+        }
+    </script>
+</body>
+</html>

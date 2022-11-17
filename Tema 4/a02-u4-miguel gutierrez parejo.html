@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <script>
+        var a = [];
+        var i = 0
+
+        while (a.length < 10) {
+            var aleatorios = Math.floor(Math.random()*1000);
+            a.push(aleatorios);
+        }
+
+        a.sort((x, y) => x-y)
+        alert("El vector de 10 elementos aleatorios es " + a)
+        var min = a.shift()
+        var max = a.pop()
+        alert("El valor más pequeño del vector es " + min +" y el valor más grande es " + max )
+        alert("El vecor sin esos valores sería: " + a)
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+       var n = prompt("Calculadora:\nPulse 1 para sumar\nPulse 2 para restar\nPulse 3 para multiplicar\nPulse 4 para dividir\nPulse 5 para calcular el modulo\nPulsa 6 para salir");
+
+       switch (n) {
+            case "1":
+                var s1 = prompt("Introduzca un numero para sumar: ");
+                var s2 = prompt("Introduce otro numero para sumar: ");
+                var s = parseInt(s1, 10) + parseInt(s2, 10);
+                alert(s);
+                break;
+
+            case "2":
+                var r1 = prompt("Introduzca un numero para restar: ");
+                var r2 = prompt("Introduce otro numero para restar: ");
+                var r = parseInt(r1, 10) - parseInt(r2, 10);
+                alert(r);
+                break;
+
+            case "3":
+                var m1 = prompt("Introduzca un numero para multiplicar: ");
+                var m2 = prompt("Introduce otro numero para multiplicar: ");
+                var m = parseInt(m1, 10) * parseInt(m2, 10);
+                alert(m);
+                break;
+            case "4":
+                var d1 = prompt("Introduzca un numero para dividir: ");
+                var d2 = prompt("Introduce otro numero para dividir: ");
+                var d = parseInt(d1, 10) / parseInt(d2, 10);
+                alert(d);
+                break;
+
+            case "5":
+                var mo1 = prompt("Introduzca un numero para calcular el modulo: ");
+                var mo2 = prompt("Introduce el modulo: ");
+                var mo = parseInt(mo1, 10) % parseInt(mo2, 10);
+                alert(mo);
+                break;
+
+            case "6":
+                break;
+            default:
+                break;
+       }
+    </script>
+</body>
+</html>

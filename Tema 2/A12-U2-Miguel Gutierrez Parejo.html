@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepe</title>
+</head>
+<body>
+    <script>
+        var menu = prompt("Posees el array [true, 5, false, 'hola', 'adios', 2]. ¿Qué deseas hacer?\n\n1. Determinar cuál de los dos elementos de texto es mayor\n2. Determinar el resultado de la suma y multiplicación realizadas con los elementos booleanos\n3. Determinar el resultado de la suma y resta realizadas con los elementos numéricos")
+        var valores = [true, 5, false, "hola", "adios", 2];
+
+        switch (menu) {
+            case "1":
+                var palabras = valores.filter((element) => typeof element === "string")
+                var mayor = (palabras[0].length > palabras[1].length) ? palabras[0] : palabras[1]
+                alert(mayor)
+                break;
+
+            case "2":
+                var suma = valores[0] + valores[2]
+                alert(Boolean(suma))
+
+                var multi = (valores[0] * valores[2])
+                alert(Boolean(multi))
+                break;
+
+            case "3":
+                var s = valores[1] + valores[5]
+                alert(s);
+
+                var r = valores[1] - valores[5]
+                alert(r);
+                break;
+            default:
+                alert("No has introducido una opción válida")
+                break;
+        }
+    </script>
+</body>
+</html>

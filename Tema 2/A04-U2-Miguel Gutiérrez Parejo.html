@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Taba de multiplicar</title>
+    </head>
+
+    <body>
+        <label for="numero">Introduce un número: </label>
+        <input type="text" name="" id="numero" />
+
+        <button id="calcular">Calcular</button>
+
+        <div id="multi"></div>
+
+        <script>
+            let genera = document.getElementById("calcular")
+            let numero = document.getElementById("numero")
+            let lienzo = document.getElementById("multi")
+
+            genera.addEventListener("click", () => {
+                for(let i = 1; i<=10; i++) {
+                lienzo.innerHTML += `${numero.value} * ${i} = ${numero.value*i} <br />`
+                }
+            })
+        </script>
+    </body>
+</html>

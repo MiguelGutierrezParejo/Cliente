@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Introduce un numero: ")
+        numero = parseInt(n, 10)
+
+        if (numero <= 0) {
+            alert("not a group")
+        } else {
+            switch (n) {
+                case "1":
+                    alert("solo")
+                    break;
+
+                case "2":
+                    alert("duet")
+                    break;
+
+                case "3":
+                    alert("trio")
+                    break;
+
+                case "4":
+                    alert("quartet")
+                    break;
+
+                default:
+                    alert("Thes es a large group")
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

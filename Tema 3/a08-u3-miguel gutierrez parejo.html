@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var r = prompt("Introduce el radio del círculo: ")
+        var n = parseFloat(r)
+
+        var a = Math.PI * Math.pow(n, 2)
+        var f = a.toFixed(2)
+
+        alert("El área del círculo es de: " + f + "cm²")
+
+        var b = prompt("Introduce la base del triángulo: ")
+        var h = prompt("Introduce la altura del triángulo: ")
+
+        alert("El área del triángulo es de: " + (b * h) / 2 + "cm²")
+    </script>
+</body>
+</html>

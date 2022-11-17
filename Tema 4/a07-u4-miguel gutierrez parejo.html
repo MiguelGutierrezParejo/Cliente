@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A07</title>
+</head>
+<body>
+    Pulsa para generar el array:
+    <button type="submit" onclick="crear_array()">Generar</button><br><br>
+    Pulsa para devolver el array con los valores menores que 8:
+    <button type="submit" onclick="filtrar_array()">Generar</button><br><br>
+    Pulsa para intercambiar los valores impares por la cadena 'impar':
+    <button type="submit" onclick="sustituir_array()">Generar</button><br><br>
+    <div id="crear"></div>
+    <div id="filtrar"></div>
+    <div id="sustituir"></div>
+    <script>
+        var a = []
+        var lienzo1 = document.getElementById("crear")
+        var lienzo2 = document.getElementById("filtrar")
+        var lienzo3 = document.getElementById("sustituir")
+
+        function crear_array() {
+            while (a.length < 10) {
+            var aleatorios = Math.floor(Math.random()*11);
+            a.push(aleatorios);
+            }
+            lienzo1.innerHTML = "El array creado es: [" + a + "]"
+        }
+
+        function filtrar_array() {
+            var menores = a.filter(n => n < 8)
+            lienzo2.innerHTML ="Los menores son: [" + menores + "]"
+        }
+
+        function sustituir_array() {
+            for (var i of a.keys()) {
+                if (a[i] % 2 != 0) {
+                    a[i] = 'impar'
+                }
+            }
+            lienzo3.innerHTML = "El array es: [" + a +"]"
+        }
+    </script>
+</body>
+</html>

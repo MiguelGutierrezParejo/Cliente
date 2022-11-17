@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A15</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Introduce un dato para cambiar su tipo: ")
+
+        var menu = prompt("Qué conversión deseas hacer?\n1. A String\n2. A int\n3. A booleano\n4. A Float")
+
+        switch (menu) {
+            case "1":
+                var s = String(x)
+                alert("El dato convertido a cadena es: "+`'${s}'`)
+                break;
+
+            case "2":
+                var n = parseInt(x, 10)
+                if (isNaN(n)) {
+                    alert("0")
+                } else {
+                    alert("El dato convertido a int es:"+ n)
+                }
+                break;
+
+            case "3":
+                var b = Boolean(x)
+                alert("El dato convertido a booleano es: " +b)
+                break;
+
+            case "4":
+                var f = parseFloat(x, 10)
+                    if (isNaN(f)) {
+                        alert("0")
+                    } else {
+                        alert("El dato convertido a float es:"+ f)
+                    }
+                    break;
+
+            default:
+                alert("Lo siento, no logro entenderte")
+                break;
+        }
+    </script>
+</body>
+</html>

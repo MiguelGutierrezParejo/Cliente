@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<body>
+    <div>
+        <h1 id="cabecera">Mondongo</h1>
+        <ol>
+            <li><div id="div1"></div></li>
+            <li><div id="div2"></div></li>
+            <li><div id="div3"></div></li>
+        </ol>
+        <div id="div4"></div>
+    </div>
+    <script>
+        debugger;
+        alert("Dime cúales son tus 3 videojuegos favoritos");
+        var juego1=prompt("Escribe el primer juego: ");
+        document.getElementById("div1").innerHTML=(juego1);
+        var juego2=prompt("Escribe el segundo juego: ");
+        document.getElementById("div2").innerHTML=(juego2);
+        var juego3=prompt("Escribe el tercer juego: ");
+        document.getElementById("div3").innerHTML=(juego3);
+        var c=confirm("¿Estás contento con la lista?");
+        var texto;
+        if (c){texto="Si"}else {texto="No"}
+        document.getElementById("div4").innerHTML=("Has pulsado: "+texto);
+        document.write ("<p>Gracias por hacerlo!</p>");
+    </script>
+</body>
+</html>
