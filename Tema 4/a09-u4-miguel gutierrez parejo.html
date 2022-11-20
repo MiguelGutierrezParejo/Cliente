@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paco</title>
+</head>
+<body>
+    <div id="lienzo"></div>
+    <script>
+        var lienzo = document.getElementById("lienzo");
+
+        class Vehiculo{
+            constructor(marca, modelo, color, anyo, cilindrada){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.anyo = anyo;
+                this.cilindrada = cilindrada
+            }
+
+            mostrarDatos(){
+                var datos = `Marca: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nAño: ${this.anyo}`;
+                lienzo.innerHTML(datos)
+            }
+
+            acelerar(velocidad){
+                this.velocidad = velocidad;
+                alert("El coche está acelerando a esta velocidad: " + this.velocidad)
+            }
+
+            arrancar(){
+                alert("El coche de marca " + this.marca + ", modelo " + this.modelo + ", color " + this.color + " está arrancando")
+            }
+
+            frenar(){
+                alert("El coche de marca " + this.marca + ", modelo " + this.modelo + ", color " + this.color + " está frenando")
+            }
+        }
+
+        let coche1 = new Vehiculo("Peugeot", "la-li-lu-le-lo", "rojo", "2022", 2000),
+            coche2 = new Vehiculo("BMW", "Paco", "Rosa", "2001", 3000);
+
+        alert(coche1.marca);
+        alert(coche2.color);
+        alert(Object.keys(coche1));
+        coche1.arrancar();
+        coche2.arrancar();
+        coche1.acelerar(120);
+        coche1.mostrarDatos();
+    </script>
+</body>
+</html>

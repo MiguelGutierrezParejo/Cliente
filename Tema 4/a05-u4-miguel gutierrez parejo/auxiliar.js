@@ -11,31 +11,27 @@ function juan() {
     a.pop()
 }
 
-function paco() {
-    window.open("auxiliar.html")
-}
-
 function mostrar() {
     alert(a)
 }
 
-function primera() {
+function paco() {
+    //Muestra las palabras
+    alert(a)
+
+    //Muestra la primera palabra
     alert(a[0])
-}
 
-function ultimo() {
+    //Mutesra la última palabra
     alert(a[a.length - 1])
-}
 
-function long() {
+    //Muestra la longitud
     alert(a.length)
-}
 
-function ordenar() {
+    //Ordena el array
     alert(a.sort())
-}
 
-function reversa() {
+    //Ordena al revés
     a.sort()
     alert(a.reverse())
 }
