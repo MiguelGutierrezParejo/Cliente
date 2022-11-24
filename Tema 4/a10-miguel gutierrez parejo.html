@@ -7,6 +7,67 @@
     <title>Juan</title>
 </head>
 <body>
+    <script>
+        class Vehiculo{
+            constructor(marca, modelo, color, anyo, cilindrada, velocidad){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.color = color;
+                this.anyo = anyo;
+                this.cilindrada = cilindrada
+                this.velocidad = velocidad
+            }
 
+            mostrarDatos(){
+                alert(`Marca: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nAño: ${this.anyo}`);
+            }
+
+            acelerar(velocidad){
+                this.velocidad = velocidad;
+                alert("El coche está acelerando a esta velocidad: " + this.velocidad)
+            }
+
+            arrancar(){
+                alert("El coche de marca " + this.marca + ", modelo " + this.modelo + ", color " + this.color + " está arrancando")
+            }
+
+            frenar(){
+                alert("El coche de marca " + this.marca + ", modelo " + this.modelo + ", color " + this.color + " está frenando")
+            }
+
+            genera_tabla(){
+                const body = document.body,
+                    tabla = document.createElement("table")
+
+                for(var i = 0; i < 2; i++){
+                    const tr = tabla.insertRow()
+                    for(var j = 0; j < 6; j++){
+                        const td = tr.insertCell()
+                        if(i == 0 && j == 0){td.appendChild(document.createTextNode("Marca"))}
+                        if(i == 0 && j == 1){td.appendChild(document.createTextNode("Modelo"))}
+                        if(i == 0 && j == 2){td.appendChild(document.createTextNode("Color"))}
+                        if(i == 0 && j == 3){td.appendChild(document.createTextNode("Año"))}
+                        if(i == 0 && j == 4){td.appendChild(document.createTextNode("Cilindrada"))}
+                        if(i == 0 && j == 5){td.appendChild(document.createTextNode("Velocidad"))}
+                        if(i == 1 && j == 0){td.appendChild(document.createTextNode(this.marca))}
+                        if(i == 1 && j == 1){td.appendChild(document.createTextNode(this.modelo))}
+                        if(i == 1 && j == 2){td.appendChild(document.createTextNode(this.color))}
+                        if(i == 1 && j == 3){td.appendChild(document.createTextNode(this.anyo))}
+                        if(i == 1 && j == 4){td.appendChild(document.createTextNode(this.cilindrada))}
+                        if(i == 1 && j == 5){td.appendChild(document.createTextNode(this.velocidad))}
+                    }
+                }
+
+                body.appendChild(tabla)
+                tabla.setAttribute("border", "1")
+            }
+        }
+
+        let coche1 = new Vehiculo("Peugeot", "la-li-lu-le-lo", "rojo", "2022", 2000, 150),
+            coche2 = new Vehiculo("BMW", "Paco", "Rosa", "2001", 3000, 200);
+
+        coche1.genera_tabla()
+        coche2.genera_tabla()
+    </script>
 </body>
 </html>

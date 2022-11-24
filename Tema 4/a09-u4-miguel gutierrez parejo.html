@@ -7,10 +7,8 @@
     <title>Paco</title>
 </head>
 <body>
-    <div id="lienzo"></div>
+    <div></div>
     <script>
-        var lienzo = document.getElementById("lienzo");
-
         class Vehiculo{
             constructor(marca, modelo, color, anyo, cilindrada){
                 this.marca = marca;
@@ -21,8 +19,7 @@
             }
 
             mostrarDatos(){
-                var datos = `Marca: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nAño: ${this.anyo}`;
-                lienzo.innerHTML(datos)
+                alert(`Marca: ${this.marca}\nModelo: ${this.modelo}\nColor: ${this.color}\nAño: ${this.anyo}`);
             }
 
             acelerar(velocidad){
