@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antonio José</title>
+</head>
+<body>
+    <script>
+        var a = []
+        var suma = 0
+
+        function crearArray(array) {
+            for (let index = 0; index < 22; index++) {
+                if (index % 2 != 0) {
+                    array.push(index)
+                };
+            }
+            return array
+        }
+        alert("Este es el array: " + crearArray(a))
+        
+        function sumaArray(array) {
+            for (let index = 0; index < array.length; index++) {
+                suma += array[index];    
+            }
+            return suma
+        }
+        alert("La suma de los valores del array es: " + sumaArray(a))
+
+        function inversa(array) {
+            return array.sort((x, y) => y - x)
+        }
+        alert("El array inverso es: " + inversa(a))
+
+        function ordenado(array) {
+            return array.sort(function (x, y) {return x-y})
+        }
+
+        function busqueda(array) {
+            var n = parseInt(prompt("Introduce el número que quieres buscar en el array:"))
+
+            if (array.includes(n)) {
+                array.splice(array.indexOf(n), 1)
+                alert("La búsqueda tuvo éxito, el valor ha sido eliminado")
+            } else {
+                alert("Lo siento, el valor introducido no está dentro del array")
+            }
+            return array
+        }
+        alert(busqueda(a))
+        alert("El array ordenado de forma ascendente es: " + ordenado(a) + "\ny de forma descendente es: \n" + inversa(a))
+    </script>
+</body>
+</html>
