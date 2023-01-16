@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <input type="button" onmousedown="detectarBoton(event);" value="boton">
+  <script>
+    function detectarBoton(event){
+      if (event.button==2)
+        alert("El botón del ratón pulsado fue el derecho");
+      else if (event.button==1)
+        alert("El botón del ratón pulsado fue el medio");
+      else
+        alert("El botón del ratón pulsado fue el izquierdo");
+    }
+  </script>
+</body>
+</html>
