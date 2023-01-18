@@ -11,19 +11,24 @@
         h1 {
             text-align: center;
         }
-        #cuadrado{
+
+        #cuadrado {
             margin:200px;
             border: solid 1px blue;
-            background:green;
-            width:100px;
-            height:100px;
+            background:white;
+            width:300px;
+            height:300px;
             position: absolute;
         }
     </style>
     <script>
+        var v = document.getElementById("cuadrado")
 
+        function azul() {
+            return cuadrado.style.background = '#CCE6FF'
+        }
     </script>
     <h1>Pulsa el ratón dentro del cuadrado y luego una tecla</h1>
-    <div id="cuadrado"></div>
+    <input type="text" id="cuadrado" onclick="this.style.background = '#FFFF00'" onmousemove="this.style.background = '#FFFFFF'" onkeypress="azul()"></input>
 </body>
 </html>
