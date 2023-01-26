@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <script>
+        function mostrarCookies() {
+            var visitas = document.cookie.replace(/(?:(?:^|.*;\s*)visitas\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            visitas = parseInt(visitas) || 0;
+            visitas ++;
+
+            var juan = document.getElementById("pepe")
+            juan.innerHTML = 'Hasta ahora llevas ' + visitas + ' visitas'
+            document.cookie = 'visitas=' + visitas + '; max-age=2592000';
+        }
+    </script>
+    <div id="pepe">
+        <button onclick="mostrarCookies()">Pulsa para mostrar las visitas que llevas</button>
+    </div>
+</body>
+</html>

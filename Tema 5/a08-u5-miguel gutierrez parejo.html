@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<script src="a08-u5-miguel gutierrez parejo.js"></script>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="">Introduce tu nombre: </label>
+            <input type="text" name="" id=""><br>
+            <label for="">Mensaje</label><br>
+            <textarea name="" id="" cols="80" rows="5"></textarea>
+        </fieldset><br><br>
+
+        <label for="color">Elige un color</label><br>
+        <input type="radio" name="color" id="red" onclick="cambiarColor(this)">
+        <label for="red">Rojo</label><br>
+        <input type="radio" name="color" id="green" onclick="cambiarColor(this)">
+        <label for="green">Verde</label><br>
+        <input type="radio" name="color" id="blue" onclick="cambiarColor(this)">
+        <label for="blue">Azul</label><br><br>
+
+        <label for="">Selecciona una asignatura:</label>
+        <select name="asignatura" id="asignatura">
+            <option value="mates">Matemáticas</option>
+            <option value="lengua">Lengua</option>
+            <option value="ingles">Inglés</option>
+            <option value="sociales">Sociales</option>
+        </select><br><br>
+
+        <label for="">Seleccione los días con disponibilad:</label><br>
+        <input type="checkbox" name="lunes">
+        <label for="lunes">Lunes</label><br>
+        <input type="checkbox" name="martes">
+        <label for="martes">Martes</label><br>
+        <input type="checkbox" name="miercoles">
+        <label for="miercoles">Miércoles</label><br>
+        <input type="checkbox" name="jueves">
+        <label for="jueves">Jueves</label><br>
+        <input type="checkbox" name="viernes">
+        <label for="viernes">Viernes</label><br><br>
+
+        <button type="submit" onclick="profe(), diaPreferido()">Haz click para enviar información</button>
+        <button type="reset" onclick = "blanco()">Comenzar a rellenar de nuevo</button>
+        <button><a href="https://www.google.es">Haz click sobre mi</a></button>
+    </form>
+</body>
+</html>

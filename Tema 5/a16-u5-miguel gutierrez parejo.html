@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+    <script src="a16-u5-miguel gutierrez parejo.js"></script>
+</head>
+<body>
+    <form action="#">
+        <label for="encuesta">¿Qué sistema operativo móvil te gusta más?</label><br>
+        <input type="radio" name="sistema" id="ios">iOS<br>
+        <input type="radio" name="sistema" id="android">Android<br>
+        <input type="radio" name="sistema" id="windows">Windows Phone<br>
+        <input type="radio" name="sistema" id="otro">Otro<br><br>
+        <button type="submit" onclick="votar()">Votar!</button>
+        <button type="submit" onclick="mostrarResultados()">Mostrar resultados</button><br><br><br>
+
+        <progress max="1" value="'0" id="barra-ios"></progress>iOs<br>
+        <progress max="1" value="0" id="barra-android"></progress> Android<br>
+        <progress max="1" value="0" id="barra-windows"></progress>Windows Phone<br>
+        <progress max="1" value="0" id="barra-otro"></progress> Otros<br>
+    </form>
+</body>
+</html>
