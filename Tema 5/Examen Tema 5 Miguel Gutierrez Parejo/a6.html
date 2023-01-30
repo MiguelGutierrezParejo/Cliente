@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A6</title>
+</head>
+<script src="a6.js"></script>
+<body>
+    <form action="#">
+        <fieldset>
+            <legend>DATOS PERSONALES DE ACCESO</legend>
+            <input type="text" name="nombre" id="nombre" pattern="^[A-Z][a-z]" placeholder="Nombre" required><br>
+    
+            <input type="text" name="apellido" id="apellido" pattern="^[A-Z][a-z]" placeholder="Apellido" required><br>
+    
+            <input type="text" name="edad" id="edad" pattern="^[0-9]|[0-9][0-9]|1[0-1][0-9]|120$" placeholder="Edad" required><br>
+
+            <input type="text" name="dni" id="dni" pattern="^[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[A-Z]$" placeholder="DNI:99.999.999-X" required><br>
+    
+            <label for="sexo">Sexo</label>
+            <select name="sexo" id="sexo">
+                <option value="masc">Masculino</option>
+                <option value="fem">Femenino</option>
+            </select><br>
+    
+            <label for="lugar">Lugar de Nacimiento</label>
+            <input type="text" name="lugar" id="lugar" pattern="^[A-Z][a-z][a-z][a-z]" required><br>
+        </fieldset><br>
+
+        <button type="submit" id="guardar">GUARDAR</button>
+        <button id="ver">VER</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mondongo</title>
+</head>
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #cuadrado {
+            margin:200px;
+        }
+    </style>
+    <script>
+        window.onload=function(){document.onkeydown=color};
+        
+        function color() {
+            var v = document.getElementById("cuadrado")
+            var tecla = objeto.which
+
+            switch (tecla) {
+                case 65:
+                    v.style.background = "'#fff301'"
+                    break;
+
+                    case 82:
+                    v.style.background = "'#ff2001'"
+                    break;
+
+                    case 78:
+                    v.style.background = "'#000000'"
+                    break;
+
+                    case 86:
+                    v.style.background = "'#09ff01'"
+                    break;
+            
+                default:
+                    break;
+            }
+        }
+    </script>
+    <h1>Pulsa una tecla</h1>
+    <div id="cuadrado"></div>
+</body>
+</html>

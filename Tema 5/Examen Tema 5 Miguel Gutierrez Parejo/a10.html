@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A10</title>
+    <script src="a10.js"></script>
+</head>
+<body>
+
+<form action="#">
+    <p>¿Qué tipo de café te gusta más?</p>
+    <p>
+        <input type="radio" name="cafe" value="solo"><label for="cafe">Café solo</label>
+    </p>
+    <p>
+        <input type="radio" name="cafe" value="leche"><label for="cafe">Café con leche</label>
+    </p>
+    <p>
+        <input type="radio" name="cafe" value="descafeinado"><label for="cafe">Café descafeinado</label>
+    </p>
+    <p>
+        <input type="radio" name="cafe" value="hielo"><label for="cafe">Café solo con hielo</label>
+    </p>
+    <input type="submit" value="Votar!" id="votar">
+    <br>
+    <br>
+    <p>
+        <progress max="1" value="0" id="solop"></progress>Café solo
+    </p>
+    <p>
+        <progress max="1" value="0" id="lechep"></progress> Café con leche
+    </p>
+    <p>
+        <progress max="1" value="0" id="descafeinadop"></progress>Café descafeinado
+    </p>
+    <p>
+        <progress max="1" value="0" id="hielop"></progress> Café solo con hielo
+    </p>
+</form>
+</body>
+</html>
