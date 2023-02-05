@@ -1,34 +1,34 @@
 /**
- * 
+ *
  */
 
 
 /************************************
 *
 * Funciones Generales
-* 
+*
 ************************************/
 
 
 /**
  * Crea el contenedor de la actividad si no existe
- * Si existe lo borra para generar uno nuevo 
+ * Si existe lo borra para generar uno nuevo
  */
 function existeActividad(){
     if (document.getElementById("actividad")){
         content.removeChild(document.getElementById("actividad"));//si existe la actividad, la borra para crear una nueva
     }
-    
+
     // Crea el contenedor de la actividad
     var divac = document.createElement("div");
     divac.setAttribute("id", "actividad");
     content.appendChild(divac);
-   
+
 }
 
  /**
  * Recibe una cadena y devuelve la misma cadena con la primera letra en Mayúscula
- * @param {string} s 
+ * @param {string} s
  * @returns {string}
  */
 function capitalize(s){
@@ -39,9 +39,9 @@ function capitalize(s){
 /************************************
 *
 * Actividad 6
-* 
+*
 ************************************/
-function generaNueve(){   
+function generaNueve(){
     //crea 2 constantes
     const ALUMNOS = [];
     const NUMALUM = 5;
@@ -49,37 +49,39 @@ function generaNueve(){
     /************************************
      *
      * FUNCIONES LOCALES A LA ACTIVIDAD
-     * 
+     *
      ************************************/
     /**
      * Genera la tabla de alumnos
-     * @param {array} cabecera 
-     * @param {array} cuerpo 
+     * @param {array} cabecera
+     * @param {array} cuerpo
      */
     function crearTablaAlum(cabecera, cuerpo){
+        //si ya hay una actividad creada, la borra
         if(document.getElementById("tabla")){
             actividad.removeChild(document.getElementById("tabla"))
         }
         //creamos la tabla y le añadimos el id tabla
         var tabla = document.createElement("table");
         tabla.setAttribute("id", "tabla");
-        
+
         // genera la cabecera de la tabla
         var thead = document.createElement("thead");
         var tr = document.createElement("tr");
-        
+
         for (e of cabecera){
-            var th = document.createElement("th");
-            var nodoTexto = document.createTextNode(capitalize(e));
-            th.appendChild(nodoTexto);
-            tr.appendChild(th);
+            var th = document.createElement("th"); //creamos los th
+            var nodoTexto = document.createTextNode(capitalize(e)); //creamos los nodos de texto
+            th.appendChild(nodoTexto); //añadimos el nodo de texto al th
+            tr.appendChild(th); //añadimos el th al tr
         }
         thead.appendChild(tr);
         tabla.appendChild(thead);
-    
+
         // Genera el cuerpo de la tabla
         var tbody = document.createElement("tbody");
         for (fila of cuerpo){
+            //añadimos lo que está escrito en cada celda a la tabla
             tr = document.createElement("tr");
             for (celda of fila){
                 var td = document.createElement("td");
@@ -89,17 +91,17 @@ function generaNueve(){
             }
             tbody.appendChild(tr);
         }
-    
+
         tabla.appendChild(tbody);
-    
+
         actividad.appendChild(tabla);
-    
+
     }
 
 
     /**
      * Comprueba que ningun campo esté vacio
-     * 
+     *
      * @param  {...any} re
      * @returns {boolean} true si hay alguno vacío
      */
@@ -109,12 +111,12 @@ function generaNueve(){
             if(e === ""){
                 interruptor = true;
             }
-        }); 
+        });
         return interruptor;
     }
 
     /**
-     * Almacena a los alumnos y sus notas 
+     * Almacena a los alumnos y sus notas
      */
     function guardarAlumno(){
        var nombre = document.getElementById("alumno").value;
@@ -132,7 +134,7 @@ function generaNueve(){
        if (isNaN(nombre) && !isNaN(modulo1, modulo2, modulo3)){
 
             if ([modulo1, modulo2, modulo3].every(e => e >= 0 && e <= 10)){
-                
+
                 ALUMNOS.push([nombre,modulo1, modulo2, modulo3]);
 
                 document.getElementById("alumno").value = "";
@@ -144,10 +146,10 @@ function generaNueve(){
                     alert("Todos los alumnos estan introducidos");
                     guardar.disabled = true;
                     generarTabla.disabled = false;
-                } 
+                }
 
             } else{
-                alert("Error: Las notas deben estar comprendidas entre 0 y 10"); 
+                alert("Error: Las notas deben estar comprendidas entre 0 y 10");
             }
 
        } else{
@@ -166,12 +168,12 @@ function generaNueve(){
     /************************************
      *
      * CREA EL CONTENIDO DE LA ACTIVIDAD
-     * 
+     *
      ************************************/
 
-    // Combrobamos que no existe el contenedor de la actividad si existe lo borramos 
+    // Combrobamos que no existe el contenedor de la actividad si existe lo borramos
     existeActividad();
-   
+
     var actividad = document.getElementById("actividad");
 
 
@@ -181,10 +183,10 @@ function generaNueve(){
     var nodoTexto = document.createTextNode("9. Crear una array multidimensional que recoja los nombres de 5 alumnos y las notas obtenidas en tres módulos. Dicha información será introducida por el usuario y una vez finalizada la recogida de datos se mostrará el contenido del array en forma de tabla.");
     enunciado.appendChild(nodoTexto);
     actividad.appendChild(enunciado);
-    
+
     //creamos el formulario
     const FORMULARIO = ["alumno", "modulo 1", "modulo 2", "modulo 3"];
-   
+
     FORMULARIO.forEach(e =>{
         //creacion del label
         var p = document.createElement("p");
@@ -193,15 +195,15 @@ function generaNueve(){
         nodoTexto = document.createTextNode(`${capitalize(e)}: `);
         la.appendChild(nodoTexto);
         p.appendChild(la);
-        
-        
+
+
         //creacion de los inputs
         var inp = document.createElement("input");
         inp.setAttribute("type", "text"); //seleccionamos el tipo de input
         inp.setAttribute("name", e.replace(" ", "")); //seleccionamos el nombre del input
         inp.setAttribute("id", e.replace(" ", "")); //seleccionamos el id del input
         p.appendChild(inp);
-        
+
         //Metemos todo en el div
         actividad.appendChild(p);
     });
@@ -230,17 +232,17 @@ function generaNueve(){
 
 
 
-    
+
 }
 
 
 /************************************
 *
 * Actividad 10 unidad 4
-* 
+*
 ************************************/
 function generaTrece(){
-    //comrpobamos si hay ya una actividad creada para borrarla 
+    //comrpobamos si hay ya una actividad creada para borrarla
     existeActividad();
     var actividad = document.getElementById("actividad");
 
@@ -251,7 +253,7 @@ function generaTrece(){
     var nodoTexto = document.createTextNode("13. Utilice el código empleado para la generación de las instancias del objeto Vehículo, y modifíquelo para que los valores de cada una de sus propiedades se impriman en una tabla HTML. Utilice la generación de código HTML desde código JavaScript. Cada instancia del objeto debeocupar una línea y el valor de cadapropiedad debe ocupar una celda de dicha línea. El resultado debe ser similar a:");
     enunciado.appendChild(nodoTexto);
     actividad.appendChild(enunciado);
-    
+
     var generarTabla = document.createElement("input");
     generarTabla.setAttribute("type", "submit");
     generarTabla.setAttribute("id", "generarTabla");
@@ -260,29 +262,29 @@ function generaTrece(){
 
     /*************************
      * Funciones locales
-     * 
+     *
      *************************/
 
      /**
       * Genera una tabla con los vehiculos
-      * @param  {...any} vehiculos 
+      * @param  {...any} vehiculos
       */
     function crearTablaCoche(...vehiculos){
         debugger;
-        
+
         if(document.getElementById("tabla")){
             actividad.removeChild(document.getElementById("tabla"))
         }
-        
+
         var tabla = document.createElement("table");
         tabla.setAttribute("id", "tabla");
-        
+
         // genera la cebecera de la tabla
         var thead = document.createElement("thead");
         var tr = document.createElement("tr");
         const CABECERA = ["Marca", "Modelo", "Color", "Año de fabricación"];
-        
-      
+
+
         for (e of CABECERA){
             var th = document.createElement("th");
             var nodoTexto = document.createTextNode(e);
@@ -291,13 +293,13 @@ function generaTrece(){
         }
         thead.appendChild(tr);
         tabla.appendChild(thead);
-    
+
         // Genera el cuerpo de la tabla
         var tbody = document.createElement("tbody");
-    
+
          for (let i = 0; i < vehiculos.length; i++){
             var tr = document.createElement("tr");
-            
+
             for (const key in vehiculos[i]) {
                 if (typeof vehiculos[i][key] != "function") {
                     var td = document.createElement("td");
@@ -305,16 +307,16 @@ function generaTrece(){
                     td.appendChild(nodoTexto);
                     tr.appendChild(td);
                 }
-                
+
             }
             tbody.appendChild(tr);
         }
         tabla.appendChild(tbody);
         actividad.appendChild(tabla);
-    
+
     }
-    
-    
+
+
     //Creamos los objetos
     function Vehiculo(marca, modelo, color,ano_fab){
         this.marca = marca;
@@ -322,21 +324,21 @@ function generaTrece(){
         this.color = color;
         this.ano_fab = ano_fab;
         this.arrancar = function(){
-                let texto = "El coche de marca " +  this.marca 
+                let texto = "El coche de marca " +  this.marca
                 + " modelo " + this.modelo
                 + " color " + this.color
                 + " ha arrancado";
         console.log(texto);
         }
     }
-    
+
     var coche1 = new Vehiculo("Ferrari", "Scaglietti", "Rojo", "2010");
     var coche2 = new Vehiculo("BMW", "Z4", "Blanco", "2010");
     var coche3 = new Vehiculo("Seat", "Toledo", "Azul", "1990");
     var coche4 = new Vehiculo("Fiat", "500", "Verde", "1995");
-    
+
     // listeners
- 
+
     document.getElementById("generarTabla")
             .addEventListener('click', () => {
                 crearTablaCoche(coche1, coche2, coche3, coche4)

@@ -1,12 +1,17 @@
-var d = document.createElement("div")
+const anyadir = document.getElementById("anyadir");
+const eliminar = document.getElementById("eliminar");
 
-function crearNodos() {
-    var t = prompt("Introduce el texto que quieras escribir")
-    var contenido = document.createTextNode(t)
-    d.appendChild(contenido)
-    document.body.appendChild(d)
-}
+anyadir.addEventListener("click", function() {
+  const texto = prompt("Escribe el texto del nuevo nodo:");
+  const nuevoNodo = document.createElement("div");
+  nuevoNodo.innerHTML = texto;
+  document.body.appendChild(nuevoNodo);
+});
 
-function borrarNodos() {
-    document.body.removeChild(d)
-}
+eliminar.addEventListener("click", function() {
+  const nodos = document.getElementsByTagName("div");
+  if (nodos.length > 0) {
+    const ultimoNodo = nodos[nodos.length - 1];
+    ultimoNodo.remove();
+  }
+});
