@@ -1,0 +1,18 @@
+{
+    "departamento": {
+        "trabajador": [
+            {
+                "nombre": "pepe",
+                "apellidos": "perez"
+            },
+            {
+                "nombre": "pepe",
+                "apellidos": "perez"
+            },
+            {
+                "nombre": "pepe",
+                "apellidos": "perez"
+            }
+        ]
+    }
+}
