@@ -8,16 +8,16 @@
     <script src="encuesta.js" defer></script>
 </head>
 <body>
-    <h1>¿Qué equipo crees que va a ganar la Liga?</h1>
-    <form action="#" method="get">
-        <ul>
-            <li><input type="radio" name="equipo" id="madrid">Real Madrid</li>
-            <li><input type="radio" name="equipo" id="barcelona">Barcelona</li>
-            <li><input type="radio" name="equipo" id="atleti">Atlético de Madrid</li>
-            <li><input type="radio" name="equipo" id="sevilla">Sevilla</li>
-        </ul>
-    </form>
-    <button id="votar">Votar</button>
-    <div id="resultado"></div>
+    <div id="encuesta">
+        <h1>¿Qué equipo crees que va a ganar la Liga?</h1>
+        <form action="#" method="get">
+            <ul>
+                <li><input type="radio" name="equipo" id="madrid" value="0" onclick="votos(this.value)">Real Madrid</li>
+                <li><input type="radio" name="equipo" id="barcelona" value="1" onclick="votos(this.value)">Barcelona</li>
+                <li><input type="radio" name="equipo" id="atleti" value="2" onclick="votos(this.value)">Atlético de Madrid</li>
+                <li><input type="radio" name="equipo" id="sevilla" value="3" onclick="votos(this.value)">Sevilla</li>
+            </ul>
+        </form>
+    </div>
 </body>
 </html>
