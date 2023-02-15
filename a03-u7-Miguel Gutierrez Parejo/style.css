@@ -1,0 +1,74 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 20px;
+}
+
+/* Estilo del título principal */
+h3 {
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo de los botones de radio */
+input[type=radio] {
+    margin: 5px;
+}
+
+/* Estilo del título de los resultados */
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Estilo del div de los resultados */
+#encuesta {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Estilo de las barras de progreso */
+.barra {
+    height: 20px;
+    background-color: #eee;
+    margin: 5px 0;
+    position: relative;
+}
+
+/* Estilo del porcentaje de cada barra */
+.porcentaje {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-weight: bold;
+}
+
+/* Estilo del color de cada barra según el equipo */
+.barra:nth-child(1) {
+    background-color: #fff;
+}
+
+.barra:nth-child(2) {
+    background-color: #f00;
+}
+
+.barra:nth-child(3) {
+    background-color: #00f;
+}
+
+.barra:nth-child(4) {
+    background-color: #f90;
+}
