@@ -1,27 +1,22 @@
-const showDomButton = document.getElementById("showDomButton");
-const domContainer = document.getElementById("domContainer");
+function anyadirNodos(nodo, lista) {
+    if (nodo.nodeType === Node.ELEMENT_NODE) {
+      const nodeItem = document.createElement('li');
+      nodeItem.textContent = nodo.nodeName;
 
-showDomButton.addEventListener("click", function () {
-    domContainer.innerHTML = "";
+      if (nodo.hasChildNodes()) {
+        const childList = document.createElement('ul');
+        nodeItem.appendChild(childList);
 
-    function displayNode(node, level) {
-        let prefix = "";
-        for (let i = 0; i < level; i++) {
-            prefix += "  ";
+        for (let i = 0; i < nodo.childNodes.length; i++) {
+          const childNode = nodo.childNodes[i];
+          anyadirNodos(childNode, childList);
         }
+      }
 
-        let nodeHtml = prefix + "<div>" + node.nodeName;
-        if (node.childNodes.length === 0) {
-            nodeHtml += ": " + node.nodeValue;
-        }
-        nodeHtml += "</div>";
-
-        domContainer.innerHTML += nodeHtml;
-
-        for (let i = 0; i < node.childNodes.length; i++) {
-            displayNode(node.childNodes[i], level + 1);
-        }
+      lista.appendChild(nodeItem);
     }
+  }
 
-    displayNode(document, 0);
-});
+  const nodoPrincipal = document.documentElement;
+  const listaDOM = document.getElementById('lista');
+  anyadirNodos(nodoPrincipal, listaDOM);
