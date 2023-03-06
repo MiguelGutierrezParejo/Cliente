@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>A3</title>
+  </head>
+  <body>
+    <h1>Listado de webs de institutos</h1>
+    <ul id="web-list"></ul>
+
+    <script>
+      // Leer el archivo JSON
+      fetch('web.json')
+        .then(response => response.json())
+        .then(data => {
+          // Recorrer los objetos del archivo JSON
+          data.forEach(item => {
+            // Crear un elemento de lista con el texto del objeto
+            const li = document.createElement('li');
+            li.textContent = `${item.display}: ${item.url}`;
+
+            // Agregar el elemento a la lista
+            document.getElementById('web-list').appendChild(li);
+          });
+        })
+        .catch(error => console.error(error));
+    </script>
+  </body>
+</html>

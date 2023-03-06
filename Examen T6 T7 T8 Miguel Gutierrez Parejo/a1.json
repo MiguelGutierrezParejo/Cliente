@@ -1,0 +1,56 @@
+{
+    "clientes": {
+      "cliente": {
+        "@id": "123",
+        "nombre": "Rafael Garcia Garcia",
+        "direccion": {
+          "@verificada": "si",
+          "calle": "avd colombia",
+          "numero": "1450",
+          "ciudad": "madrid",
+          "provincia": "madrid",
+          "codigopostal": "29500",
+          "pais": "españa"
+        }
+      }
+    }
+}
+ 
+{
+    "empleados": {
+      "empleado": [
+        {
+          "nombre": "jorge",
+          "apellido": "mesa",
+          "edad": "28"
+        },
+        {
+          "nombre": "ana",
+          "apellido": "sanchez",
+          "edad": "21"
+        },
+        {
+          "nombre": "pedro",
+          "apellido": "lee",
+          "edad": "44"
+        }
+      ]
+    }
+}
+
+
+{
+    "libros": {
+      "libro": {
+        "@id": "autores",
+        "@year": "1999",
+        "autores": {
+          "nombre": [
+            "ricardo perez",
+            "marta gomez"
+          ]
+        }
+      }
+    }
+}
+  
